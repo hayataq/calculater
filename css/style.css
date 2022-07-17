@@ -1,0 +1,63 @@
+* ,*::after , *::before {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right ,#f7f306,#04fb6a)
+}
+.cal-grid{
+    
+    display: grid;
+    justify-content: center;
+    align-content:center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px,auto) repeat(5,100px);
+ 
+}
+.cal-grid > button {
+    cursor: pointer;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    outline: none;
+    background-color: rgba(255,255,255,0.75);
+
+}
+.cal-grid > button:hover{
+    background-color: rgba(255,255,255,0.9);
+}
+.span-two{
+    grid-column: span 2;
+   
+}
+.output{
+    grid-column: 1/-1;
+    background-color: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column;
+    /* padding: 2px 2px; */
+    align-items: flex-end;
+    color: aliceblue;
+}
+.output .name {
+    align-self: flex-start;
+    color: yellowgreen;
+    font-size: 2rem;
+   
+    
+}
+.output .pre-Operand{
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.75);
+ 
+   
+
+}
+.output .curr-Operand{
+    font-size: 2.5rem;
+    color: rgba(255,255,255,0.9)
+}
